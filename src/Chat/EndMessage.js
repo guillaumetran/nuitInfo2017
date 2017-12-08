@@ -8,13 +8,15 @@ import {
   Text,
   View,
   Dimensions,
-  ScrollView
+  ScrollView,
+  Image
 } from "react-native";
 
 const { width, height } = Dimensions.get("window");
 
 export default class EndMessage extends React.Component {
   render() {
+    console.log(this.props.endMessage);
     return (
       <View style={{ flex: 1 }}>
         <ScrollView style={{ paddingRight: 40, paddingLeft: 40 }}>

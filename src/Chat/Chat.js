@@ -71,7 +71,7 @@ export default class Chat extends React.Component {
         infoModal: false
       });
       this.onReceive(nextMessage);
-    }, 1000);
+    }, 4000);
   }
 
   onSend(messages = []) {

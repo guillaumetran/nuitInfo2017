@@ -64,7 +64,7 @@ module.exports = [
       _id: 1,
       name: "Joueur"
     },
-    next: [42]
+    next: [26]
   },
   {
     _id: 7,
@@ -74,7 +74,7 @@ module.exports = [
       _id: 1,
       name: "Joueur"
     },
-    next: [43]
+    next: [13]
   },
   {
     _id: 8,
@@ -109,8 +109,8 @@ module.exports = [
     next: [42]
   },
   {
-    _id: 11,
-    text: "Trop de vissage que tu connais pas ?",
+    _id: 60,
+    text: "Trop de visage que tu connais pas ?",
     createdAt: new Date(Date.UTC(2016, 7, 30, 17, 20, 0)),
     user: {
       _id: 1,
@@ -150,7 +150,7 @@ module.exports = [
     next: [6]
   },
   {
-    _id: 13,
+    _id: 61,
     text: "Moi je reste toujours dormir j'ai pas ce problème",
     createdAt: new Date(Date.UTC(2016, 7, 30, 17, 20, 0)),
     user: {
@@ -204,7 +204,8 @@ module.exports = [
   {
     _id: 18,
     text:
-      "je commence à flipper;Eva ? Bon conduit prudemment, on se reparle après;Eva t'es rentrée ?",
+      "Je commence à flipper;Eva ? Bon conduit prudemment, on se reparle après" +
+      "Eva t'es rentrée ?",
     createdAt: new Date(Date.UTC(2016, 7, 30, 17, 20, 0)),
     user: {
       _id: 1,
@@ -216,7 +217,7 @@ module.exports = [
   },
   {
     _id: 21,
-    text: "On c'est vu a la soirée de Martin",
+    text: "On s'est vu a la soirée de Guillaume",
     createdAt: new Date(Date.UTC(2016, 7, 30, 17, 20, 0)),
     user: {
       _id: 1,
@@ -276,7 +277,7 @@ module.exports = [
   },
   {
     _id: 27,
-    text: "T'etais une grosse chaudasse",
+    text: "Tu faisais du mal à voir",
     createdAt: new Date(Date.UTC(2016, 7, 30, 17, 20, 0)),
     user: {
       _id: 1,

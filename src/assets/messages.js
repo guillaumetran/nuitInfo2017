@@ -56,7 +56,7 @@ module.exports = [
   {
     _id: 26,
     text:
-      "Oui c'est vrai que j'ai pas trop profité de la soirée... Mais j'aime pas trop les soirées ou il y a trop de monde en général",
+      "Oui c'est vrai que j'ai pas trop profité de la soirée.. Mais j'aime pas trop les soirées où il y a trop de monde en général",
     createdAt: new Date(Date.UTC(2016, 7, 30, 17, 20, 0)),
     user: {
       _id: 2,
@@ -94,7 +94,7 @@ module.exports = [
   {
     _id: 5,
     text:
-      "Ouais enfin j'ai pas envie de me mettre mal avec des inconnus, surtout si je dois conduire le lendemain",
+      "Ouais enfin j'ai pas envie de me mettre mal avec des inconus, surtout si je dois conduire le lendemain",
     createdAt: new Date(Date.UTC(2016, 7, 30, 17, 20, 0)),
     user: {
       _id: 2,
@@ -230,7 +230,7 @@ module.exports = [
     },
     next: [],
     end: true,
-    endNumber: 1
+    endNumber: 2
   },
 
   {
@@ -336,19 +336,19 @@ module.exports = [
 
   {
     _id: 25,
-    text: "Un verre à jamais tuer personne",
+    text: "Un verre n'a jamais tué personne",
     createdAt: new Date(Date.UTC(2016, 7, 30, 17, 20, 0)),
     user: {
       _id: 2,
       name: "Emilie Gueth",
       avatar: require("./images/eva.jpg")
     },
-    next: [1]
+    next: [40]
   },
 
   {
     _id: 27,
-    text: "Ouai !!!! Je vasi pas tardé àpartir",
+    text: "Ouai !!!! Je vais pas tarder à partir",
     createdAt: new Date(Date.UTC(2016, 7, 30, 17, 20, 0)),
     user: {
       _id: 2,
