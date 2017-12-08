@@ -287,7 +287,7 @@ module.exports = [
   },
   {
     _id: 29,
-    text: "Nan ça va faut dire que la soirée était pas folle non plus",
+    text: "Non ça va. La soirée était pas folle non plus",
     createdAt: new Date(Date.UTC(2016, 7, 30, 17, 20, 0)),
     user: {
       _id: 1,
@@ -297,7 +297,7 @@ module.exports = [
   },
   {
     _id: 30,
-    text: "Bah un peu en partant du principe que tu m'as vomis dessus ahah",
+    text: "Un peu ! Tu m'as vomis dessus ahah",
     createdAt: new Date(Date.UTC(2016, 7, 30, 17, 20, 0)),
     user: {
       _id: 1,
@@ -308,7 +308,7 @@ module.exports = [
   {
     _id: 31,
     text:
-      "Bah vu que tu va mieux, c'est bon. J'ai même pas pu profiter vu que ton cousin était mort merci et salut.",
+      "Tu vas mieux, c'est bon. J'ai même pas pu profiter vu que ton cousin était mort merci et salut.",
     createdAt: new Date(Date.UTC(2016, 7, 30, 17, 20, 0)),
     user: {
       _id: 1,
@@ -319,7 +319,7 @@ module.exports = [
   },
   {
     _id: 32,
-    text: "Bah vu que t'étais la seule ça fait un peu pitié",
+    text: "Tu étais la seule ça faisait bizarre",
     createdAt: new Date(Date.UTC(2016, 7, 30, 17, 20, 0)),
     user: {
       _id: 1,
@@ -340,7 +340,7 @@ module.exports = [
   },
   {
     _id: 34,
-    text: "Nan nan t'inquiète. Y avait ton cousin aussi ",
+    text: "Il y avait ton cousin aussi aha",
     createdAt: new Date(Date.UTC(2016, 7, 30, 17, 20, 0)),
     user: {
       _id: 1,
@@ -350,7 +350,7 @@ module.exports = [
   },
   {
     _id: 35,
-    text: "T'es la cousine de Martin aussi c'est normal.",
+    text: "T'es la cousine de Martin c'est normal.",
     createdAt: new Date(Date.UTC(2016, 7, 30, 17, 20, 0)),
     user: {
       _id: 1,
@@ -360,7 +360,7 @@ module.exports = [
   },
   {
     _id: 36,
-    text: "tu m'as fait pitié aussi meuf.",
+    text: "De même pour moi.",
     createdAt: new Date(Date.UTC(2016, 7, 30, 17, 20, 0)),
     user: {
       _id: 1,
@@ -371,7 +371,7 @@ module.exports = [
   },
   {
     _id: 37,
-    text: "Ouais demain tu serais libre ? Le temps de décuver un peu",
+    text: "Oui demain tu serais libre ? Le temps de décuver un peu",
     createdAt: new Date(Date.UTC(2016, 7, 30, 17, 20, 0)),
     user: {
       _id: 1,
@@ -381,7 +381,7 @@ module.exports = [
   },
   {
     _id: 38,
-    text: "Nan merci, j'ai pas trop le temps en ce moment",
+    text: "Non merci, j'ai pas trop le temps en ce moment",
     createdAt: new Date(Date.UTC(2016, 7, 30, 17, 20, 0)),
     user: {
       _id: 1,
@@ -392,7 +392,7 @@ module.exports = [
   },
   {
     _id: 39,
-    text: "Ouais demain ça me va. Mais je croyais que tu buvais pas beaucoup",
+    text: "Oui demain ça me va. Mais je croyais que tu buvais pas beaucoup",
     createdAt: new Date(Date.UTC(2016, 7, 30, 17, 20, 0)),
     user: {
       _id: 1,

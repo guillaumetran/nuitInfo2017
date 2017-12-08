@@ -286,7 +286,7 @@ module.exports = [
   {
     _id: 21,
     text:
-      "Oh merde je suis désolé, c'est vraiment sympa de t'être occupé de moi après ça alors",
+      "Je suis désolé, c'est vraiment sympa de t'être occupé de moi",
     createdAt: new Date(Date.UTC(2016, 7, 30, 17, 20, 0)),
     user: {
       _id: 2,
@@ -299,7 +299,7 @@ module.exports = [
   {
     _id: 22,
     text:
-      "Oh nan c'est tendu, là après c'est peut-être mieux si on en parle en vrai.",
+      "Oh non ! C'est peut-être mieux si on en parle en vrai.",
     createdAt: new Date(Date.UTC(2016, 7, 30, 17, 20, 0)),
     user: {
       _id: 2,
@@ -312,7 +312,7 @@ module.exports = [
   {
     _id: 23,
     text:
-      "Même c'est sympa, pour me faire pardonner on pourrait boire une verre disons demain",
+      "C'est sympa, pour me faire pardonner on pourrait boire une verre demain",
     createdAt: new Date(Date.UTC(2016, 7, 30, 17, 20, 0)),
     user: {
       _id: 2,
@@ -324,7 +324,7 @@ module.exports = [
 
   {
     _id: 24,
-    text: "Ouais c'est ça ahah à demain du coup",
+    text: "Ouais c'est ça ! à demain du coup :)",
     createdAt: new Date(Date.UTC(2016, 7, 30, 17, 20, 0)),
     user: {
       _id: 2,
@@ -348,7 +348,7 @@ module.exports = [
 
   {
     _id: 27,
-    text: "Ouai !!!! Je vais pas tarder à partir",
+    text: "Ouai !!! Je vais pas tarder à partir",
     createdAt: new Date(Date.UTC(2016, 7, 30, 17, 20, 0)),
     user: {
       _id: 2,
