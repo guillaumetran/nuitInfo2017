@@ -478,7 +478,7 @@ module.exports = [
   },
   {
     _id: 47,
-    text: "Disons qu’elle ma déjà parlé beaucoup de fois de toi",
+    text: "Elle m'a déjà parlé plusieurs de fois de toi",
     createdAt: new Date(Date.UTC(2016, 7, 30, 17, 20, 0)),
     user: {
       _id: 1,
@@ -542,7 +542,7 @@ module.exports = [
   {
     _id: 53,
     text:
-      "Tu n’es pas la seule, qui n’as jamais fumé en soirée ? ça fait du bien de temps en temps",
+      "Tu n’es pas la seule, qui n’as jamais fumée en soirée. Ca fait du bien de temps en temps",
     createdAt: new Date(Date.UTC(2016, 7, 30, 17, 20, 0)),
     user: {
       _id: 1,
@@ -584,7 +584,7 @@ module.exports = [
   {
     _id: 57,
     text:
-      "J’ai adoré aussi, fait attention en prenant la route il y’a beaucoup de gendarmes !",
+      "J’ai adoré aussi, fais attention en prenant la route il y’a beaucoup de gendarmes !",
     createdAt: new Date(Date.UTC(2016, 7, 30, 17, 20, 0)),
     user: {
       _id: 1,
@@ -604,7 +604,7 @@ module.exports = [
   },
   {
     _id: 59,
-    text: "Eva, tout va bien ???;Evaaa",
+    text: "Eva, tout va bien ???",
     createdAt: new Date(Date.UTC(2016, 7, 30, 17, 20, 0)),
     user: {
       _id: 1,
