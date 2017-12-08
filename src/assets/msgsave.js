@@ -26,7 +26,6 @@ module.exports = [
     },
     next: [2, 3]
   },
-
   {
     _id: 3,
     text:
@@ -39,11 +38,10 @@ module.exports = [
     },
     next: [4, 5]
   },
-
   {
     _id: 41,
     text:
-      "D'accord. Ha oui je me souviens de toi, enfin je crois.. Martin c'est ça ?",
+      "D'accord. Ha oui je me souviens de toi Enfin je crois.. Martin c'est ça ?",
     createdAt: new Date(Date.UTC(2016, 7, 30, 17, 20, 0)),
     user: {
       _id: 2,
@@ -152,8 +150,6 @@ module.exports = [
       name: "Emilie Gueth",
       avatar: require("./images/eva.jpg")
     },
-    end: true,
-    endNumber: 2,
     next: []
   },
 
@@ -229,8 +225,7 @@ module.exports = [
       avatar: require("./images/eva.jpg")
     },
     next: [],
-    end: true,
-    endNumber: 1
+    end: true
   },
 
   {
@@ -331,7 +326,7 @@ module.exports = [
       name: "Emilie Gueth",
       avatar: require("./images/eva.jpg")
     },
-    next: [1]
+    next: []
   },
 
   {
@@ -343,7 +338,7 @@ module.exports = [
       name: "Emilie Gueth",
       avatar: require("./images/eva.jpg")
     },
-    next: [1]
+    next: []
   },
 
   {
@@ -356,5 +351,170 @@ module.exports = [
       avatar: require("./images/eva.jpg")
     },
     next: [41, 42]
+  },
+
+  {
+    _id: 28,
+    text:
+      "Oui.. Tu as peu tètre raison jvais demander a ma copinee si je peu dormir chez ellle",
+    createdAt: new Date(Date.UTC(2016, 7, 30, 17, 20, 0)),
+    user: {
+      _id: 2,
+      name: "Emilie Gueth",
+      avatar: require("./images/eva.jpg")
+    },
+    next: []
+  },
+
+  {
+    _id: 29,
+    text:
+      "Trop mignon de ta part, je vois que tu es très charmeur. Dis-moi, que fais-tu dans la vie ?",
+    createdAt: new Date(Date.UTC(2016, 7, 30, 17, 20, 0)),
+    user: {
+      _id: 2,
+      name: "Emilie Gueth",
+      avatar: require("./images/eva.jpg")
+    },
+    next: [44, 45]
+  },
+
+  {
+    _id: 30,
+    text:
+      "Oui exactement, je suis en 3 ème année de médecine. Tu ne connaitrais pas ma meilleur amie Marie ? Elle fait également du commerce.",
+    createdAt: new Date(Date.UTC(2016, 7, 30, 17, 20, 0)),
+    user: {
+      _id: 2,
+      name: "Emilie Gueth",
+      avatar: require("./images/eva.jpg")
+    },
+    next: [46]
+  },
+
+  {
+    _id: 31,
+    text:
+      "C’est intéressant, bien sûr que oui mais comment sais-tu que c’est ma meilleure amie ?",
+    createdAt: new Date(Date.UTC(2016, 7, 30, 17, 20, 0)),
+    user: {
+      _id: 2,
+      name: "Emilie Gueth",
+      avatar: require("./images/eva.jpg")
+    },
+    next: [47, 48]
+  },
+
+  {
+    _id: 32,
+    text:
+      "C’est ma meilleur amie ☺ j’ai adoré passé du temps avec toi hier soir à la soirée de Guillaume.",
+    createdAt: new Date(Date.UTC(2016, 7, 30, 17, 20, 0)),
+    user: {
+      _id: 2,
+      name: "Emilie Gueth",
+      avatar: require("./images/eva.jpg")
+    },
+    next: [49, 50]
+  },
+
+  {
+    _id: 33,
+    text: "J’espère qu’elle t’a raconté de bonnes choses sur moi.",
+    createdAt: new Date(Date.UTC(2016, 7, 30, 17, 20, 0)),
+    user: {
+      _id: 2,
+      name: "Emilie Gueth",
+      avatar: require("./images/eva.jpg")
+    },
+    next: [51, 52]
+  },
+
+  {
+    _id: 34,
+    text: "Désolé ... j’aime bien fumé en soirée",
+    createdAt: new Date(Date.UTC(2016, 7, 30, 17, 20, 0)),
+    user: {
+      _id: 2,
+      name: "Emilie Gueth",
+      avatar: require("./images/eva.jpg")
+    },
+    next: [53]
+  },
+
+  {
+    _id: 35,
+    text: "Avec grand plaisir, on en fume un à notre prochaine soirée ?",
+    createdAt: new Date(Date.UTC(2016, 7, 30, 17, 20, 0)),
+    user: {
+      _id: 2,
+      name: "Emilie Gueth",
+      avatar: require("./images/eva.jpg")
+    },
+    next: [54, 55]
+  },
+
+  {
+    _id: 36,
+    text: "Pourquoi tu es venu me parlé pour me dire ça ?",
+    createdAt: new Date(Date.UTC(2016, 7, 30, 17, 20, 0)),
+    user: {
+      _id: 2,
+      name: "Emilie Gueth",
+      avatar: require("./images/eva.jpg")
+    },
+    next: [],
+    end: true
+  },
+
+  {
+    _id: 37,
+    text: "On se reverra vite, ça te dit un cinéma mardi prochain ?",
+    createdAt: new Date(Date.UTC(2016, 7, 30, 17, 20, 0)),
+    user: {
+      _id: 2,
+      name: "Emilie Gueth",
+      avatar: require("./images/eva.jpg")
+    },
+    next: [59]
+  },
+
+  {
+    _id: 38,
+    text:
+      "Ne t’inquiète pas j’ai l’habitude, je ne me suis jamais fait attraper par les policiers.",
+    createdAt: new Date(Date.UTC(2016, 7, 30, 17, 20, 0)),
+    user: {
+      _id: 2,
+      name: "Emilie Gueth",
+      avatar: require("./images/eva.jpg")
+    },
+    next: [59]
+  },
+
+  {
+    _id: 39,
+    text: "Non je ne peux pas, je dois emmener ma mère chez le médecin demain",
+    createdAt: new Date(Date.UTC(2016, 7, 30, 17, 20, 0)),
+    user: {
+      _id: 2,
+      name: "Emilie Gueth",
+      avatar: require("./images/eva.jpg")
+    },
+    next: [59]
+  },
+
+  {
+    _id: 40,
+    text:
+      "Bonjour, je suis la maman d’Eva. Eva est décédé dans un accident de voiture, impliquant également une famille et enfants de 3 et 7 ans également décédé. Les autopsies ont révélé des traces de drogue … Des amies à ma fille m’ont déclaré que vous avez consommé de la drogue avec elle durant la soirée d’hier. C’est de votre faute si notre fille chérie est morte…",
+    createdAt: new Date(Date.UTC(2016, 7, 30, 17, 20, 0)),
+    user: {
+      _id: 2,
+      name: "Emilie Gueth",
+      avatar: require("./images/eva.jpg")
+    },
+    next: [],
+    end: true
   }
 ];

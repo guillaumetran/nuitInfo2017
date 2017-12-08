@@ -25,85 +25,125 @@ const { width, height } = Dimensions.get("window");
 
 export default class Chat extends React.Component {
   state = {
+    chat: [],
     messages: [],
+    nextMessage: null,
     responses: [],
+    currentResponses: [],
+    infoMessages: [],
+    info: null,
+    endMessages: [],
+    end: null,
+    endMessage: null,
     replyModal: false,
     infoModal: false,
     endModal: false,
-    end: false,
+    isFinish: false,
+    canAnswer: false,
     typingText: ""
   };
-  constructor(props) {
-    super(props);
-
-    this._isMounted = false;
-    this._isAlright = null;
-  }
 
   componentWillMount() {
-    this._isMounted = true;
     this.setState(() => {
       return {
         messages: require("../assets/messages.js"),
-        responses: require("../assets/responses.js")
+        responses: require("../assets/responses.js"),
+        infoMessages: require("../assets/infoMessages.js"),
+        endMessages: require("../assets/endMessages.js")
       };
     });
   }
 
-  componentWillUnmount() {
-    this._isMounted = false;
+  componentDidMount() {
+    this.showInfo(1);
   }
 
-  onSend(messages = []) {
-    this.setState(previousState => {
-      return {
-        messages: GiftedChat.append(previousState.messages, messages)
-      };
+  showInfo(id) {
+    let info = this.findById(this.state.infoMessages, id);
+    let nextMessage = this.findById(this.state.messages, info._id);
+    this.setState({
+      infoModal: true,
+      info: info,
+      nextMessage: nextMessage
     });
-    this.answerDemo(messages);
-  }
-
-  answerDemo(messages) {
-    if (messages.length > 0) {
-      this.setState(previousState => {
-        return {
-          typingText: "Eva est entrain d'écrire"
-        };
-      });
-    }
-
     setTimeout(() => {
-      if (this._isMounted === true) {
-        this.onReceive("Alright");
-      }
-
-      this.setState(previousState => {
-        return {
-          typingText: null
-        };
+      this.setState({
+        infoModal: false
       });
+      this.onReceive(nextMessage);
     }, 1000);
   }
 
-  onReceive(text) {
-    this.setState(previousState => {
-      return {
-        messages: GiftedChat.append(previousState.messages, {
-          _id: Math.round(Math.random() * 1000000),
-          text: text,
-          createdAt: new Date(),
-          user: {
-            _id: 2,
-            name: "Eva Martin",
-            avatar: require("../assets/images/eva.jpg")
-          }
-        })
-      };
-    });
+  onSend(messages = []) {
+    console.log(messages);
+    if (messages.end) {
+      if (messages.endNumber) {
+        this.setState({
+          endMessage: this.findById(this.state.endMessages, messages.endNumber),
+          isFinish: true,
+          endModal: true
+        });
+      } else this.setState({ isFinish: true });
+    } else {
+      this.setState(previousState => {
+        return {
+          chat: GiftedChat.append(previousState.chat, messages),
+          canAnswer: false
+        };
+      });
+      let message = this.findById(this.state.messages, messages.next[0]);
+      this.onReceive(message);
+    }
+  }
+
+  onReceive(message) {
+    console.log(message);
+    setTimeout(() => {
+      this.setState({
+        typingText: "Eva est entrain d'écrire.."
+      });
+    }, 1000);
+    setTimeout(() => {
+      this.setState({
+        typingText: null,
+        canAnswer: true
+      });
+      if (message.end) {
+        if (message.endNumber) {
+          this.setState({
+            endMessage: this.findById(
+              this.state.endMessages,
+              message.endNumber
+            ),
+            isFinish: true,
+            endModal: true
+          });
+        } else this.setState({ isFinish: true });
+      }
+      let answers = [];
+      for (let i = 0; i < message.next.length; i++) {
+        answers.push(this.findById(this.state.responses, message.next[i]));
+      }
+      this.setState(previousState => {
+        return {
+          currentResponses: answers,
+          chat: GiftedChat.append(previousState.chat, {
+            _id: Math.round(Math.random() * 1000000),
+            text: message.text,
+            createdAt: new Date(),
+            user: {
+              _id: 2,
+              name: "Eva Martin",
+              avatar: require("../assets/images/eva.jpg")
+            }
+          })
+        };
+      });
+    }, 2000);
   }
 
   renderComposer(props) {
-    return this.state.end ? (
+    return this.state.isFinish ? (
       <View
         style={{
           flex: 1,
@@ -138,7 +178,7 @@ export default class Chat extends React.Component {
         <TouchableOpacity
           activeOpacity={0.7}
           onPress={() => {
-            this.setState({ replyModal: true });
+            if (this.state.canAnswer) this.setState({ replyModal: true });
           }}
           style={{
             flex: 1,
@@ -183,7 +223,7 @@ export default class Chat extends React.Component {
       <View style={{ flex: 1, backgroundColor: "#1F1F1F" }}>
         <Header />
         <GiftedChat
-          messages={this.state.messages}
+          messages={this.state.chat}
           onSend={this.onSend}
           locale="fr"
           user={{
@@ -194,6 +234,35 @@ export default class Chat extends React.Component {
           renderComposer={() => this.renderComposer()}
           bottomOffset={500}
         />
+        <CardModal
+          swipeArea={height / 4}
+          swipeThreshold={50}
+          isOpen={this.state.endModal}
+          headerSize={0.2}
+          backdropOpacity={0.9}
+          onClosed={() => this.setState({ endModal: false })}
+          header={
+            <View style={{ flex: 0.2, backgroundColor: "transparent" }}>
+              <ModalLine />
+            </View>
+          }
+          backdropContent={
+            <View style={{ flex: 0.19, backgroundColor: "transparent" }}>
+              <Image
+                style={{ flex: 1, height: "100%", width: "100%" }}
+                source={
+                  this.state.endMessage
+                    ? this.state.endMessage.image
+                    : require("../assets/images/end_alcool.jpg")
+                }
+                blurRadius={0.5}
+                resizeMode="cover"
+              />
+            </View>
+          }
+        >
+          <EndMessage endMessage={this.state.endMessage} />
+        </CardModal>
         <Modal
           style={{
             flex: 1,
@@ -207,7 +276,7 @@ export default class Chat extends React.Component {
           onClosed={() => this.setState({ replyModal: false })}
         >
           <Answers
-            responses={this.state.responses}
+            responses={this.state.currentResponses}
             sendMessage={messages => this.onSend(messages)}
             closeModal={() => this.setState({ replyModal: false })}
           />
@@ -223,37 +292,9 @@ export default class Chat extends React.Component {
           coverScreen={true}
           backdropOpacity={0.9}
           isOpen={this.state.infoModal}
-          onClosed={() => this.setState({ infoModal: false })}
         >
-          <InfoMessage />
+          <InfoMessage info={this.state.info} />
         </Modal>
-        <CardModal
-          swipeArea={height / 4}
-          swipeThreshold={50}
-          isOpen={this.state.endModal}
-          onClosed={() => this.setState({ endModal: false })}
-          headerSize={0.2}
-          backdropOpacity={0.9}
-          header={
-            <View style={{ flex: 0.2, backgroundColor: "transparent" }}>
-              <ModalLine />
-            </View>
-          }
-          backdropContent={
-            <View style={{ flex: 0.19, backgroundColor: "transparent" }}>
-              <Image
-                style={{ flex: 1, height: "100%", width: "100%" }}
-                source={require("../assets/images/end_alcool.jpg")}
-                blurRadius={0.5}
-                resizeMode="cover"
-              />
-            </View>
-          }
-        >
-          <View style={{ flex: 1, justifyContent: "center" }}>
-            <EndMessage />
-          </View>
-        </CardModal>
       </View>
     );
   }

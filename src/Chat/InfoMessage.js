@@ -11,8 +11,7 @@ export default class EndMessage extends React.Component {
     return (
       <View style={{ paddingRight: 40, paddingLeft: 40 }}>
         <Text style={styles.description}>
-          Vous avez rencontré Eva lors d'une soirée chez Guillaume, vous
-          l'ajoutez le lendemain pour apprendre à la connaitre
+          {this.props.info ? this.props.info.text : null}
         </Text>
       </View>
     );

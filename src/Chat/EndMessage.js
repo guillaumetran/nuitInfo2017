@@ -16,23 +16,13 @@ const { width, height } = Dimensions.get("window");
 export default class EndMessage extends React.Component {
   render() {
     return (
-      <ScrollView style={{ paddingRight: 40, paddingLeft: 40 }}>
-        <View style={{ height: height / 12 }} />
-        <Text style={styles.description}>
-          Votre amie Eva est décedée car elle a pris le volant avec de l'alcool
-          dans le sang Votre amie Eva est décedée car elle a pris le volant avec
-          de l'alcool dans le sang Votre amie Eva est décedée car elle a pris le
-          volant avec de l'alcool dans le sang
-        </Text>
-        <Text style={styles.description}>
-          est décedée car elle a pris le volant avec de l'alcool dans le sang
-          Votre amie Eva est décedée c est décedée car elle a pris le volant
-          avec de l'alcool dans le sang Votre amie Eva est décedée car elle a
-          pris le volant avec de l'alcool dans le sang Votre amie Eva est
-          décedée .
-        </Text>
-        <View style={{ height: height / 12 }} />
-      </ScrollView>
+      <View style={{ flex: 1 }}>
+        <ScrollView style={{ paddingRight: 40, paddingLeft: 40 }}>
+          <View style={{ height: height / 12 }} />
+          <Text style={styles.description}>{this.props.endMessage.text}</Text>
+          <View style={{ height: height / 12 }} />
+        </ScrollView>
+      </View>
     );
   }
 }

@@ -4,7 +4,9 @@
 module.exports = [
   {
     _id: 1,
-    text: "L'alcool tue"
+    text:
+      "Vous avez rencontré Eva lors d'une soirée chez Guillaume, vous l'ajoutée le lendemain pour apprendre à la connaitre",
+    nextMessage: 1
   },
   {
     _id: 2,

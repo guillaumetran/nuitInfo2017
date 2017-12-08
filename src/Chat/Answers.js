@@ -31,13 +31,16 @@ export default class Chat extends React.Component {
                   <TouchableOpacity
                     style={{ flex: 1, justifyContent: "center" }}
                     onPress={() => {
+                      this.props.closeModal();
                       this.props.sendMessage({
                         _id: Math.round(Math.random() * 1000000),
                         text: item.text,
                         createdAt: new Date(),
-                        user: item.user
+                        user: item.user,
+                        next: item.next || null,
+                        end: item.end || false,
+                        endNumber: item.endNumber || null
                       });
-                      this.props.closeModal();
                     }}
                   >
                     <Text
