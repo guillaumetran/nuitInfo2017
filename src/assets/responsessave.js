@@ -14,7 +14,7 @@ module.exports = [
   },
   {
     _id: 2,
-    text: "J'ai vu un air de famille",
+    text: "J'ai vu un air de famille entre toi et Nicolas",
     createdAt: new Date(Date.UTC(2016, 7, 30, 17, 20, 0)),
     user: {
       _id: 1,
@@ -35,15 +35,26 @@ module.exports = [
   {
     _id: 4,
     text:
-      "En même temps tu as passé presque toute la soirée sur ton téléphone !",
+      "En même temps tu as passé presque toute ta soirée sur ton téléphone !",
     createdAt: new Date(Date.UTC(2016, 7, 30, 17, 20, 0)),
     user: {
       _id: 1,
       name: "Joueur"
     },
-    next: [26]
+    next: [42]
   },
-
+  {
+    _id: 5,
+    text:
+      "Tu te souviens pas ? Je suis déçu. Je reviendrai quand tu auras plus de souvenirs",
+    createdAt: new Date(Date.UTC(2016, 7, 30, 17, 20, 0)),
+    user: {
+      _id: 1,
+      name: "Joueur"
+    },
+    end: true,
+    next: []
+  },
   {
     _id: 6,
     text:
@@ -423,7 +434,7 @@ module.exports = [
   },
   {
     _id: 42,
-    text: "Ok roule bien ! On se reparle après",
+    text: "Ok roule bien ! On se reparle apres",
     createdAt: new Date(Date.UTC(2016, 7, 30, 17, 20, 0)),
     user: {
       _id: 1,

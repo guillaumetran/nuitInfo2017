@@ -37,7 +37,7 @@ module.exports = [
       name: "Emilie Gueth",
       avatar: require("./images/eva.jpg")
     },
-    next: [4]
+    next: [4, 5]
   },
 
   {
@@ -81,7 +81,7 @@ module.exports = [
 
   {
     _id: 4,
-    text: "Toi déjà aha",
+    text: "Toi dejà aha",
     createdAt: new Date(Date.UTC(2016, 7, 30, 17, 20, 0)),
     user: {
       _id: 2,
@@ -356,18 +356,5 @@ module.exports = [
       avatar: require("./images/eva.jpg")
     },
     next: [41, 42]
-  },
-  {
-    _id: 28,
-    text:
-      "Oui.. Tu as peut être raison je vais demander si je peux dormir chez ma pote",
-    createdAt: new Date(Date.UTC(2016, 7, 30, 17, 20, 0)),
-    user: {
-      _id: 2,
-      name: "Emilie Gueth",
-      avatar: require("./images/eva.jpg")
-    },
-    end: true,
-    next: []
   }
 ];
