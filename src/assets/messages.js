@@ -247,7 +247,7 @@ module.exports = [
 
   {
     _id: 18,
-    text: "Ah d'accord donc tu veux juste des nudes ?",
+    text: "Ah d'accord pas très sympa !",
     createdAt: new Date(Date.UTC(2016, 7, 30, 17, 20, 0)),
     user: {
       _id: 2,
@@ -260,7 +260,7 @@ module.exports = [
 
   {
     _id: 19,
-    text: "Désolé j'espère que je t'ai pas gâché ta soirée du coup...",
+    text: "Désolé j'espère que je ne t'ai pas gâché ta soirée..",
     createdAt: new Date(Date.UTC(2016, 7, 30, 17, 20, 0)),
     user: {
       _id: 2,
